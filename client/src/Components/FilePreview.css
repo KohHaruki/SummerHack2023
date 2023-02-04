@@ -1,0 +1,15 @@
+.file-preview-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.file-preview-item {
+    display: flex;
+    border: 2px solid grey;
+}
+
+.file-preview-item > p {
+    padding: 5px;
+}
