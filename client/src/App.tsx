@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero title={"Easily extract tabular data from PNG, JPG, and PDF"}/>
+      <Hero title={"Online Image Scanner"} subtitle={"Easily extract tabular data from PNG, JPG, and PDF"}/>
       <DragDropFileUploader />
       <Article title="Some additional content" content={content} />
       <Footer />

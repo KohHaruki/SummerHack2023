@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/react.svg'
+import './Header.css'
 
 const Header = () => {
     
@@ -8,9 +9,9 @@ const Header = () => {
             <nav className="nav">
                 <img className="logo" src={logo} />
                 <ul className="nav">
-                    <li>HOME</li>
-                    <li>FOR DEVELOPERS</li>
-                    <li>ABOUT</li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>For Developers</li>
                 </ul>
             </nav>
         </header>
