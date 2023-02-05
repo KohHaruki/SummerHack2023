@@ -15,14 +15,14 @@ const DragDropFileUploader = () => {
 
     const handleUpload = () => {
         const formData = new FormData();
-        let url = "http://localhost:5000/api/uploadfile"
+        const url = "http://localhost:5000/api/uploadfile"
 
         for (let i = 0; i < fileList.length; i++) {
-            formData.append(`file_${i}`, fileList[i]);
+            formData.append(`userpic`, fileList[i], fileList[i].name);
         }
         fetch(url, {
             method: 'POST',
-            body: formData
+            body: formData,
         })
             .then((response) => {
                 if (!response.ok) {
@@ -61,7 +61,7 @@ const DragDropFileUploader = () => {
                 onDrop={onDrop}
             >
                 <p className="drag-drop-area-label">Drag & Drop your files here</p>
-                <input className="drag-drop-input" type="file" multiple onChange={onFileDrop} />
+                <input className="drag-drop-input" type="file" multiple accept=".jpg, .png, .pdf" onChange={onFileDrop} />
             </div>
 
             <button className="upload-button" onClick={handleUpload}>Upload Images</button>
