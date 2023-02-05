@@ -11,7 +11,7 @@ class Pipeline:
             "file_path": file_path,
             "csv_path": config["csv_output"] if "csv_output" in config.keys() else None, 
             "number_of_columns": number_of_columns, 
-            "structured_text_output": {},
+            "structured_text_output": {"output":[]},
         }
 
         self.pipeline_components = [
@@ -29,4 +29,12 @@ class Pipeline:
         
 
 if __name__ == "__main__":
-    pass
+    # self.pipeline_package = {
+    #     "file_path": file_path,
+    #     "csv_path": config["csv_output"] if "csv_output" in config.keys() else None, 
+    #     "number_of_columns": number_of_columns, 
+    #     "structured_text_output": {},
+    # }
+    scanner = Pipeline("image_to_scan/image.png", number_of_columns=7)
+    scanner.execute()
+    print(scanner.pipeline_package["structured_text_output"]["output"])

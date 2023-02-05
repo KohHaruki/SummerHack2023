@@ -14,7 +14,7 @@ def filter_contours(contours, image):
     try:
         height, width = image.shape[:2]
         min_area = 500
-        max_area = 0.3 * height * width  # 30% of the image size
+        max_area = 0.2 * height * width  # 30% of the image size
 
         for c in contours:
             area = cv2.contourArea(c)
@@ -240,8 +240,10 @@ def img_plumber(pipeline_package: dict, pipeline_key="file_path"):
     except Exception as e:
         print(e)
 
-    for row in structured_text_output:
-        print(row)
+    # Edit package
+    pipeline_package["structured_text_output"]["output"] = structured_text_output
+
+    return pipeline_package
  
 if __name__ =="__main__":
     pipeline_package = {
@@ -251,4 +253,11 @@ if __name__ =="__main__":
         'data_entity_output': {'doneby': None, 'output': None, 'attempts': []},
         'schema_output': None,
     }
-    img_plumber(pipeline_package)
+    pipeline_package = {
+        'file_path': 'test_cases/test_image_2.png',
+        'number_of_columns': 3,
+        'structured_text_output': {'doneby': None, 'output': None, 'attempts': []},  # output, extractby, : attempts{ extractby: errmsg }
+        'data_entity_output': {'doneby': None, 'output': None, 'attempts': []},
+        'schema_output': None,
+    }
+    print(img_plumber(pipeline_package))
