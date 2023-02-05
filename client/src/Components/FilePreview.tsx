@@ -1,4 +1,3 @@
-import React from 'react'
 import './FilePreview.css'
 
 const FilePreview = (props: any) => {

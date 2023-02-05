@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Article = (props: any) => {
     return (
         <div className="article">
