@@ -15,12 +15,12 @@ const DragDropFileUploader = () => {
 
     const handleUpload = () => {
         const formData = new FormData();
+        let url = "http://localhost:5000/api/uploadfile"
 
         for (let i = 0; i < fileList.length; i++) {
             formData.append(`file_${i}`, fileList[i]);
         }
-
-        fetch("api/uploadfile", {
+        fetch(url, {
             method: 'POST',
             body: formData
         })
