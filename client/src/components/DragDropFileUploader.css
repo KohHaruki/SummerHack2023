@@ -11,13 +11,13 @@
     position: relative;
     width: 100%;
     height: 400px;
-    border: 2px dashed #2ad19c;
+    border: 2px dashed #8fb879;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ebfbfa;
+    background-color: #e2f4e4;
     margin: 1rem auto;
 }
 
@@ -51,8 +51,13 @@
     font-size: 1rem;
     text-transform: uppercase;
     padding: 10px;
-    background-color: #2ad19c;
+    color: #FFF;
+    background-color: #8fb879;
     border-radius: 8px;
     cursor: pointer;
     border: 0;
+}
+
+.upload-button:hover {
+    opacity: 0.8;
 }
