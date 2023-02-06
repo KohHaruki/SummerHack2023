@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import FilePreview from './FilePreview'
+import uploadLogo from '../assets/cloud-upload.svg'
 import './DragDropFileUploader.css'
 
 const DragDropFileUploader = () => {
@@ -53,21 +54,22 @@ const DragDropFileUploader = () => {
     }
 
     return (
-        <>
+        <div className="upload-section">
             <div className="drag-drop-area" 
                 ref={dragRef}
                 onDragEnter={onDragEnter}
                 onDragLeave={onDragLeave}
                 onDrop={onDrop}
             >
-                <p className="drag-drop-area-label">Drag & Drop your files here</p>
+                <img className="drag-drop-area__img" src={uploadLogo} alt="upload logo" />
+                <p className="drag-drop-area__label">Drag & Drop your files here</p>
                 <input className="drag-drop-input" type="file" multiple accept=".jpg, .png, .pdf" onChange={onFileDrop} />
             </div>
 
             <button className="upload-button" onClick={handleUpload}>Upload Images</button>
 
             <FilePreview fileList={fileList} fileRemove={fileRemove}/>
-        </>
+        </div>
     )
 }
 

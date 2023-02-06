@@ -1,15 +1,47 @@
 .file-preview-area {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
 .file-preview-item {
     display: flex;
+    position: relative;
+    padding: 0.5rem;
     border: 2px solid grey;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
 }
 
-.file-preview-item > p {
-    padding: 5px;
+.img-logo {
+    width: 1.5rem;
+    margin-right: 1rem;
+    flex: none;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.file-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.remove-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
 }
