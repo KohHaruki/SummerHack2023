@@ -14,25 +14,29 @@ const DragDropFileUploader = () => {
         setFileList(updatedFileList);
     }
 
-    const handleUpload = () => {
-        const formData = new FormData();
+    const handleUpload = async () => {
+        let formData = new FormData();
         const url = "http://localhost:5000/api/uploadfile"
 
         for (let i = 0; i < fileList.length; i++) {
-            formData.append(`userpic`, fileList[i], fileList[i].name);
-        }
-        fetch(url, {
-            method: 'POST',
-            body: formData,
-        })
-            .then((response) => {
+            formData.append(`image`, fileList[i], fileList[i].name);
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                });
                 if (!response.ok) {
                     throw new Error('Network response was not ok')
                 }
-                return response.json()
-            })
-            .then((result) => {console.log("Success:", result)})
-            .catch((error) => {console.log(error)});
+                const result = await response.json();
+                console.log("Success:", result)
+            } catch (error) {
+                console.log(error)
+            }
+            
+            formData = new FormData();
+        }   
     }
 
     const fileRemove = (file: File) => {
