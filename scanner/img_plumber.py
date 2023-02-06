@@ -242,6 +242,7 @@ def img_plumber(pipeline_package: dict, pipeline_key="file_path"):
 
     # Edit package
     pipeline_package["structured_text_output"]["output"] = structured_text_output
+    pipeline_package["structured_text_output"]["output"] = {"billy":structured_text_output[1]}
 
     return pipeline_package
  

@@ -30,7 +30,8 @@ app.post('/api/uploadfile', upload.single('image'), (req, res)=> {
   res.header("Access-Control-Allow-Methods", "PUT POST")
     
   const pythonPath = "../scanner/pipeline.py"
-  const pythonProcess = spawn('python3', [pythonPath]);
+  const cwd = "../scanner";
+  const pythonProcess = spawn('python3', [pythonPath], { cwd });
   pythonProcess.stdout.on('data', (data) => {
     // Handle the data returned from the Python function
     const result = JSON.parse(data.toString());
