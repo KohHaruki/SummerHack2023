@@ -31,23 +31,22 @@
 } */
 
 .hero-title {
-  color: #000000;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
   font-size: 40px;
 }
 
 .hero-subtitle {
-  color: #2ad19c;
+  color: #838986;
   font-family: 'Nunito Sans';
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 23px;
+  font-weight: normal;
   text-align: center;
 }
 
 .article {
-  max-width: 36em;
-	margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 	padding: 1em;
 }
 
@@ -56,5 +55,5 @@
   background-color: grey;
   color: white;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
