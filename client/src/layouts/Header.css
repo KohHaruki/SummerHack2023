@@ -10,6 +10,7 @@ header {
 .logo {
   height: 3em;
   padding: 1.5em;
+  padding-left: 4rem;
 }
 
 .nav {
@@ -17,6 +18,10 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+}
+
+.nav h1 {
+  color: #8fb879;
 }
 
 .nav ul {
@@ -38,7 +43,7 @@ header {
   position: absolute;
   width: 100%;
   height: 0.25rem;
-  background: #2ad19c;
+  background: #8fb879;
   left: 0;
   bottom: 0;
   transform: scale(0,1);
