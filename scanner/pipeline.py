@@ -35,6 +35,14 @@ if __name__ == "__main__":
     #     "number_of_columns": number_of_columns, 
     #     "structured_text_output": {},
     # }
+    import os
+
+    file_path = "image_to_scan\image.png"
+
+    if os.path.exists(file_path):
+        print(f"File {file_path} exists")
+    else:
+        print(f"File {file_path} does not exist")
 
     # scanner = Pipeline("image_to_scan/image.png", number_of_columns=7)
     # scanner.execute()
