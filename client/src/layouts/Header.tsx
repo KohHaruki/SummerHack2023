@@ -7,8 +7,12 @@ const Header = () => {
     return (
         <header>
             <nav className="nav">
-                <img className="logo" src={logo} />
-                <h1>Online Image Scanner</h1>
+                <NavLink to="/">
+                    <img className="logo" src={logo} />
+                </NavLink>
+                <NavLink to="/">
+                    <h1>Online Image Scanner</h1>
+                </NavLink>
                 <ul className="nav">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="about">About</NavLink></li>
