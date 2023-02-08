@@ -242,7 +242,6 @@ def img_plumber(pipeline_package: dict, pipeline_key="file_path"):
 
     # Edit package
     pipeline_package["structured_text_output"]["output"] = structured_text_output
-    pipeline_package["structured_text_output"]["output"] = {"billy":structured_text_output[1]}
 
     return pipeline_package
  
@@ -254,11 +253,11 @@ if __name__ =="__main__":
         'data_entity_output': {'doneby': None, 'output': None, 'attempts': []},
         'schema_output': None,
     }
-    pipeline_package = {
-        'file_path': 'test_cases/test_image_2.png',
-        'number_of_columns': 3,
-        'structured_text_output': {'doneby': None, 'output': None, 'attempts': []},  # output, extractby, : attempts{ extractby: errmsg }
-        'data_entity_output': {'doneby': None, 'output': None, 'attempts': []},
-        'schema_output': None,
-    }
+    # pipeline_package = {
+    #     'file_path': 'test_cases/test_image_2.png',
+    #     'number_of_columns': 3,
+    #     'structured_text_output': {'doneby': None, 'output': None, 'attempts': []},  # output, extractby, : attempts{ extractby: errmsg }
+    #     'data_entity_output': {'doneby': None, 'output': None, 'attempts': []},
+    #     'schema_output': None,
+    # }
     print(img_plumber(pipeline_package))
