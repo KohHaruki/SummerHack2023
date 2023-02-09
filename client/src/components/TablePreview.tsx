@@ -1,7 +1,11 @@
 import { UniqueTabularData } from '../types/UniqueTabularData'
 import Table from './Table';
 
-const TablePreview = (props: any) => {
+interface TablePreviewProps {
+    downloadableData: UniqueTabularData[];
+}
+
+const TablePreview = (props: TablePreviewProps) => {
     const downloadCsv = (csv: string, index: number) => {
         const aTag = document.createElement('a')
         aTag.setAttribute("href", `data:text/csv;charset=utf-8,${csv}`)
@@ -21,7 +25,7 @@ const TablePreview = (props: any) => {
     return (
         <>
             {
-                props.downloadableData.map((tabularData:UniqueTabularData, index: number) => (
+                props.downloadableData.map((tabularData: UniqueTabularData, index: number) => (
                     <div key={tabularData.uid}>
                         <Table key={tabularData.uid} title={"Table " + (index + 1)} tabulardata={tabularData.tabulardata}/>
                         <button onClick={() => downloadCsv(tabularData.csv, index)}>Download</button>

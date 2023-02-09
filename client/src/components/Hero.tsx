@@ -1,4 +1,9 @@
-const Hero = (props: any) => {
+interface HeroProps {
+    title: string;
+    subtitle?: string;
+}
+
+const Hero = (props: HeroProps) => {
     return (
         <div className="hero">
             <h2 className="hero-title">{props.title}</h2>

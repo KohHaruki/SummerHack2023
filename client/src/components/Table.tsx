@@ -1,6 +1,12 @@
 import './Table.css'
 
-const Table = (props: any) => {
+interface TableProps {
+    key: string;
+    title: string;
+    tabulardata: string[][];
+}
+
+const Table = (props: TableProps) => {
 
     return (
         <div className="table-container"> 

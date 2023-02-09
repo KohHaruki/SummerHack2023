@@ -2,7 +2,12 @@ import './FilePreview.css'
 import imageLogo from '../assets/image.svg'
 import trashLogo from '../assets/trash-fill.svg'
 
-const FilePreview = (props: any) => {
+interface FilePreviewProps {
+    fileList: File[];
+    fileRemove(item:File): void;
+}
+
+const FilePreview = (props: FilePreviewProps) => {
     if (props.fileList.length == 0) {
         return (
             <p>Upload files to start</p>
