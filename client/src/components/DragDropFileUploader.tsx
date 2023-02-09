@@ -4,7 +4,11 @@ import Spinner from './Spinner'
 import uploadLogo from '../assets/cloud-upload.svg'
 import './DragDropFileUploader.css'
 
-const DragDropFileUploader = (props: any) => {
+interface DragDropFileUploaderProps {
+    updateDownloadableData: (obj: {structured_text_output: string[], csv_output: string}) => void;
+}
+
+const DragDropFileUploader = (props: DragDropFileUploaderProps) => {
     const [fileList, setFileList] = useState<File[]>([]);
     const [isUploading, setIsUploading] = useState<boolean>(false);
 

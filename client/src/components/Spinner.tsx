@@ -1,6 +1,6 @@
 import './Spinner.css'
 
-const Spinner = (props: any) => {
+const Spinner = () => {
     return <div className="spinner"></div>
 }
 
