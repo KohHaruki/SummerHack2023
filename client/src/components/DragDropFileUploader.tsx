@@ -81,7 +81,8 @@ const DragDropFileUploader = (props: any) => {
 
                 console.log("Success:", result)
 
-                props.updateDownloadableData(Object.values(result.structured_text_output))
+                // props.updateDownloadableData(Object.values(result.structured_text_output))
+                props.updateDownloadableData(result)
                 
 
             } catch (error) {
