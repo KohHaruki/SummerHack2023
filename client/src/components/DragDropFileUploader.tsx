@@ -1,10 +1,13 @@
 import React, { useState, useRef } from 'react'
 import FilePreview from './FilePreview'
+import Spinner from './Spinner'
 import uploadLogo from '../assets/cloud-upload.svg'
 import './DragDropFileUploader.css'
 
 const DragDropFileUploader = (props: any) => {
     const [fileList, setFileList] = useState<File[]>([]);
+    const [isUploading, setIsUploading] = useState<boolean>(false);
+
     const dragRef = useRef<HTMLDivElement>(null);
 
     const onFileDrop = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,6 +22,8 @@ const DragDropFileUploader = (props: any) => {
         let formData = new FormData();
         // Change the port accordingly
         const url = "http://localhost:8080/api/uploadfile"
+
+        setIsUploading(true)
 
         for (let i = 0; i < fileList.length; i++) {
             formData.append(`image`, fileList[i], fileList[i].name);
@@ -81,7 +86,8 @@ const DragDropFileUploader = (props: any) => {
 
                 console.log("Success:", result)
 
-                props.updateDownloadableData(Object.values(result.structured_text_output))
+                // props.updateDownloadableData(Object.values(result.structured_text_output))
+                props.updateDownloadableData(result)
                 
 
             } catch (error) {
@@ -89,8 +95,11 @@ const DragDropFileUploader = (props: any) => {
             }
             
             formData = new FormData();
-        }  
+        }
 
+        setIsUploading(false)
+
+        // Empties the files that has been uploaded
         setFileList([]) 
     }
 
@@ -125,7 +134,9 @@ const DragDropFileUploader = (props: any) => {
                 <input className="drag-drop-input" type="file" multiple accept=".jpg, .png, .pdf" onChange={onFileDrop} />
             </div>
 
-            <button className="upload-button" onClick={handleUpload}>Upload Images</button>
+            <button className="upload-button" onClick={handleUpload} disabled={isUploading} >
+                {isUploading ? <><Spinner /> &nbsp; Loading</>: "Upload Images"}
+            </button>
 
             <FilePreview fileList={fileList} fileRemove={fileRemove}/>
         </div>

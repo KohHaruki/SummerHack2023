@@ -11,9 +11,10 @@ const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellen
 const Home = () => {
     const [downloadableData, setDownloadableData] = useState<Array<UniqueTabularData>>([])
 
-    const updateDownloadableData = (data: Array<Array<string>>) => {
+    const updateDownloadableData = (data: any) => {
         const newUniqueTabularData: UniqueTabularData = {
-            tabulardata: data,
+            tabulardata: data.structured_text_output,
+            csv: data.csv_output,
             uid: uniqid()
         }
 
@@ -22,12 +23,10 @@ const Home = () => {
 
     return (
         <>
-            <div className="container">
-                <Hero title={"Online Image Scanner"} subtitle={"Easily extract tabular data from PNG, JPG, and PDF"}/>
-                <DragDropFileUploader updateDownloadableData={updateDownloadableData}/>
-                <TablePreview downloadableData={downloadableData}/>
-                <Article title="Some additional content" content={content} />
-            </div>
+            <Hero title={"Online Image Scanner"} subtitle={"Easily extract tabular data from PNG, JPG, and PDF"}/>
+            <DragDropFileUploader updateDownloadableData={updateDownloadableData}/>
+            <TablePreview downloadableData={downloadableData}/>
+            <Article title="Some additional content" content={content} />
         </>
     )
 }
