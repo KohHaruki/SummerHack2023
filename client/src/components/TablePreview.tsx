@@ -14,7 +14,7 @@ const TablePreview = (props: any) => {
     }
 
 
-    if (props.downloadableData.length == 0) {
+    if (props.downloadableData.length === 0) {
         return null;
     }
 
