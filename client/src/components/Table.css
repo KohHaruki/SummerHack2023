@@ -15,3 +15,12 @@ table {
     width: 100%;
 }
 
+.table-container {
+    max-width: 600px;
+    height: 80vh;
+    max-height: 600px;
+    overflow: auto;
+    margin: 1rem auto 1rem auto;
+    border: 1px solid #ddd;
+}
+

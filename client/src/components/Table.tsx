@@ -3,7 +3,7 @@ import './Table.css'
 const Table = (props: any) => {
 
     return (
-        <>
+        <div className="table-container"> 
             <h2>{props.title}</h2>
             <table className="table">
                 {
@@ -20,7 +20,7 @@ const Table = (props: any) => {
                     ))
                 }
             </table>
-        </>
+        </div>
         
     )
 }
