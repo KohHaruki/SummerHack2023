@@ -30,6 +30,10 @@
   padding: 10px;
 } */
 
+.hero {
+  padding-top: 100px;
+}
+
 .hero-title {
   font-weight: bold;
   text-align: center;

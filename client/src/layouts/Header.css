@@ -1,7 +1,7 @@
 header {
   background-color: #fafafa;
   color: #292b2b;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -31,7 +31,7 @@ header {
 .nav ul {
     list-style: none;
     justify-content: space-between;
-    margin-right: 4rem;
+    margin-right: 1rem;
 }
 
 .nav ul li a {
@@ -56,7 +56,7 @@ header {
 
 .nav ul li a:hover {
   transform: scale(1,1);
-  opacity: 0.65;
+  /* opacity: 0.65; */
 }
 
 .nav ul li a:hover::after {
@@ -64,10 +64,28 @@ header {
   position: absolute;
 }
 
-.nav ul li a.active {
+/* .nav ul li a.active {
   opacity: 1;
 }
 
 .nav ul li a.active::after {
   transform: scale(1,1);
+} */
+
+.login-button {
+  margin-right: 4rem;
+  padding: 0.3rem 0.7rem;
+  border: 2px solid #8fb879;
+  border-radius: 5px;
+  background-color: inherit;
+  color: #8fb879;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #8fb879;
+  color: #FFF;
+  cursor: pointer;
 }
