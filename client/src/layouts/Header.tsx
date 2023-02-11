@@ -18,7 +18,6 @@ const Header = () => {
                     <li><NavLink to="about">About</NavLink></li>
                     <li><NavLink to="developer">For Developers</NavLink></li>
                 </ul>
-                {/* <NavLink to="login"><button className="login-button">Log In</button></NavLink> */}
                 <button className="login-button"><NavLink to="login">Log In</NavLink></button>
             </nav>
         </header>

@@ -1,6 +1,7 @@
 interface HeroProps {
     title: string;
     subtitle?: string;
+    id?: string;
 }
 
 const Hero = (props: HeroProps) => {
