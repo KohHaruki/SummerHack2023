@@ -6,7 +6,7 @@ const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rut
 const Developer = (props: any) => {
     return (
         <div>
-            <Hero title="For Developers" subtitle="API documentation" id={props.id}/>
+            <Hero title="For Developers" subtitle="API documentation"/>
             <Article title="" content={content}/>
         </div>
     )
