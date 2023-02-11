@@ -1,13 +1,41 @@
-import Article from '../components/Article'
 import Hero from '../components/Hero'
 
-const content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum turpis leo, id imperdiet tortor mattis non. Vestibulum placerat venenatis tellus sagittis interdum. Mauris lorem tellus, egestas a vehicula at, finibus id diam. Nam nec egestas mauris. Donec cursus luctus odio, a bibendum nulla porttitor sollicitudin. Nunc suscipit auctor varius. Quisque et quam malesuada risus volutpat viverra egestas in mauris. Donec pulvinar rhoncus arcu id tempor. Vivamus ut odio feugiat nunc ullamcorper commodo. Quisque ante odio, condimentum quis semper posuere, molestie eget nisl. In fermentum non mi ut semper. In sed elementum quam, at semper felis. Sed a arcu nunc. Fusce aliquam nulla ante, porttitor feugiat eros aliquet sed. Phasellus vel tellus ante. Etiam urna diam, dictum eget ultricies nec, ultrices in ex. Maecenas a sollicitudin diam, sit amet congue arcu. Vivamus dignissim pulvinar euismod. Vestibulum libero sapien, mollis sed vestibulum ac, faucibus a augue. Vestibulum eros sem, tempus mollis lobortis a, commodo sed elit. Aliquam erat volutpat. Nunc aliquet tincidunt augue ut iaculis. Donec semper, orci facilisis interdum pharetra, nunc mauris consequat quam, ac lobortis lectus sem et sapien. Fusce lobortis mi ac scelerisque viverra. Aliquam rutrum posuere consequat. Mauris dolor turpis, euismod eget mauris ac, vehicula bibendum ex. Donec ut orci non risus cursus congue. Donec molestie commodo sapien ac ullamcorper. Donec faucibus mollis efficitur. Cras ac venenatis massa. Curabitur semper fringilla urna, at dapibus augue mollis dignissim. Quisque tristique, risus et tincidunt consectetur, urna libero fringilla dui, sit amet eleifend augue augue a arcu. Curabitur tellus libero, suscipit vehicula neque at, varius lobortis enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ornare aliquam luctus. Aenean varius dui vel purus tristique scelerisque eu id nunc. Nam sed aliquet massa. In felis massa, faucibus quis tempus sodales, molestie nec ante. Pellentesque ultricies, nunc non pellentesque euismod, nulla purus dictum lorem, sit amet ullamcorper dolor libero laoreet arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam egestas viverra nunc id porttitor. Suspendisse finibus lorem orci, at rhoncus tortor consectetur ut."
+const content = "Our web application is designed to extract tabular data from PNG, JPG, and PDF files submitted by users. With the power of computer vision and cutting-edge technology, we have built a platform that streamlines the process of gathering data from these types of files and presents it in a clean and organized manner.\nThe frontend of our application is built using React JS, a popular JavaScript library for building user interfaces. This provides a user-friendly interface for users to upload their files and view the extracted data. The backend, on the other hand, is powered by express.js and python, two highly efficient technologies for handling the processing of data and ensuring that it is presented in the most accurate and efficient manner.\nThe scanning mechanism used in our application is based on computer vision, which allows us to accurately and quickly extract data from a wide range of file types. Whether it's a simple PNG image or a complex PDF document, our technology is able to process it efficiently and present the data in a manner that is easy to understand.\nIn conclusion, our web application is the perfect solution for anyone looking to extract data from PNG, JPG, or PDF files. With its user-friendly interface, cutting-edge technology, and efficient data processing, it's a must-have tool for anyone looking to streamline their data extraction process."
 
 const About = (props: any) => {
+
     return (
-        <div>
-            <Hero title="About" subtitle="subtitle"/>
-            <Article title="" content={content}/>
+        <div className="container about">
+            <Hero title="About Our Product" subtitle=""/>
+            <h2>Introduction</h2>
+                <p>The web application is designed to extract tabular data from PNG, JPG, or PDF files.</p>
+
+                <h2>Technology Stack</h2>
+                <ul>
+                <li>Frontend: React JS</li>
+                <li>Backend: Express.js and Python</li>
+                <li>Scanning mechanism: powered by computer vision</li>
+                </ul>
+
+                <h2>Key Features</h2>
+                <ul>
+                <li>Ability to extract data from various file formats</li>
+                <li>Use of computer vision for accurate data extraction</li>
+                <li>User-friendly interface built with React JS</li>
+                <li>Robust backend built with Express.js and Python</li>
+                </ul>
+
+                <h2>Benefits</h2>
+                <ul>
+                <li>Automated data extraction saves time and effort</li>
+                <li>Accurate results with the use of computer vision technology</li>
+                <li>Convenient and efficient data extraction process</li>
+                <li>Improved productivity and data organization</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>The web application provides an innovative solution for extracting tabular data from various file formats, leveraging the power of computer vision technology and a user-friendly interface built with React JS, Express.js and Python.</p>
+
         </div>
     )
 }
