@@ -56,10 +56,37 @@
 
 .footer {
   text-align: center;
-  background-color: #8fb879;
+  background-color: #ebebeb;
   color: white;
   width: 100%;
   padding: 1rem 0;
+  margin-top: 5rem;
+  bottom: 0;
+}
+
+.footer-contact {
+  padding: 1rem;
+}
+
+.footer-contact h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding-top: 0.5rem;
+}
+
+.footer-contact ul li {
+  font-family: 'Nunito Sans';
+  font-size: 16px;
+}
+
+.footer p {
+  font-family: 'Nunito Sans';
+  padding: 1rem;
+  color: #818380;
 }
 
 .container {

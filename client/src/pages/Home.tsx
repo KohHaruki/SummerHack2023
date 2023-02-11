@@ -25,12 +25,10 @@ const Home = () => {
 
     return (
         <>
-            <Hero title={"Online Image Scanner"} subtitle={"Easily extract tabular data from PNG, JPG, and PDF"} id="home"/>
+            <Hero title={"Online Image Scanner"} subtitle={"Easily extract tabular data from PNG, JPG, and PDF"} />
             <DragDropFileUploader updateDownloadableData={updateDownloadableData}/>
             <TablePreview downloadableData={downloadableData}/>
             <Article title="Some additional content" content={content} />
-            <About id="about" />
-            <Developer id="developer" />
         </>
     )
 }
