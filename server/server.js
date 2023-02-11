@@ -28,7 +28,7 @@ app.post('/api/uploadfile', upload.single('image'), (req, res)=> {
   res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "PUT POST")
-    
+  console.log("post request loading")
   const pythonPath = "../scanner/pipeline.py"
   const cwd = "../scanner";
   const pythonProcess = spawn('python3', [pythonPath], { cwd });
