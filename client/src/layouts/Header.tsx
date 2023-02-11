@@ -7,18 +7,19 @@ const Header = () => {
     return (
         <header>
             <nav className="nav">
-                <a href="#home">
+                <NavLink to="/">
                     <img className="logo" src={logo} />
-                </a>
-                <a href="#home">
+                </NavLink>
+                <NavLink to="/">
                     <h1>Online Image Scanner</h1>
-                </a>
+                </NavLink>
                 <ul className="nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#developer">For Developers</a></li>
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="about">About</NavLink></li>
+                    <li><NavLink to="developer">For Developers</NavLink></li>
                 </ul>
-                <NavLink to="login" target='blank'><button className="login-button">Log In</button></NavLink>
+                {/* <NavLink to="login"><button className="login-button">Log In</button></NavLink> */}
+                <button className="login-button"><NavLink to="login">Log In</NavLink></button>
             </nav>
         </header>
     )
