@@ -3,4 +3,5 @@
   margin: 0;
   font-family: 'Poppins', 'PT Sans Caption',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: #2e2b2a;
+  scroll-behavior: smooth;
 }
