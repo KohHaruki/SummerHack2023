@@ -47,7 +47,8 @@ if __name__ == "__main__":
     # }
 
     # import os
-    file_path = "../scanner/image_to_scan/image.png"
+    # file_path = "../scanner/image_to_scan/image.png"
+    file_path = "./image.png"
     scanner = Pipeline(file_path) # number_of_columns=7
     scanner.execute()
     json_string = json.dumps(scanner.pipeline_package["json_output"]["output"])#scanner.pipeline_package["structured_text_output"]["output"]

@@ -149,7 +149,7 @@ def img_plumber(pipeline_package: dict, pipeline_key="file_path"):
     """ For extracting data from tables
     """
     # Setting pytesseracts path
-    pytesseract.pytesseract.tesseract_cmd=r'tesseract\tesseract.exe'
+    # pytesseract.pytesseract.tesseract_cmd=r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
 
     structured_text_output = []
 
