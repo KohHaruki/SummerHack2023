@@ -35,7 +35,7 @@ NumPy is a Python library for scientific computing that provides support for lar
 - Implementing a log-in system with authentication and databases.
 
 ## Credits
-- Haruki Koh ([GitHub](https://github.com/KohHaruki)): Front-end implementation with React JS and TypeScript
-- Euan Lim ([GitHub](https://github.com/GrassyAirplane)): Back-end implementation with Express.js (server) and Python (scanner)
-- Zoe Tay ([GitHub](https://github.com/NiftyCoffee)): CSS styling and website design
-- Jensen Kau ([GitHub](https://github.com/JensenKau)): Debugging and technology research
+- Haruki Koh ([GitHub](https://github.com/KohHaruki) | UniMelb student): Front-end implementation with React JS and TypeScript
+- Euan Lim ([GitHub](https://github.com/GrassyAirplane) | Monash U student): Back-end implementation with Express.js (server) and Python (scanner)
+- Zoe Tay ([GitHub](https://github.com/NiftyCoffee) | Monash U student): CSS styling and website design
+- Jensen Kau ([GitHub](https://github.com/JensenKau) | Monash U student): Debugging and technology research
