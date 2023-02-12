@@ -148,7 +148,7 @@ def resizing_method(cell_image):
 def img_plumber(pipeline_package: dict, pipeline_key="file_path"):
     """ For extracting data from tables
     """
-    # Setting pytesseracts path
+    # Setting pytesseracts path (if you're a Mac user, comment the line below)
     pytesseract.pytesseract.tesseract_cmd=r'tesseract\tesseract.exe'
 
     structured_text_output = []

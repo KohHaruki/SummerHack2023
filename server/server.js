@@ -18,14 +18,14 @@ const upload = multer({ storage: fileStorageEngine})
 const { spawn } = require('child_process');
 const bodyParser = require('body-parser');
 
-app.use(cors({origin:"http://127.0.0.1:5173"}));
+app.use(cors({origin:"http://localhost:5173"}));
 
 app.get('/home', (req,res)=> {
   res.end("HELLO THERE")  
 })
 
 app.post('/api/uploadfile', upload.single('image'), (req, res)=> {
-  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5173");
+  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "PUT POST")
   console.log("post request loading")
@@ -39,6 +39,6 @@ app.post('/api/uploadfile', upload.single('image'), (req, res)=> {
   });
 })
 
-app.listen(5000, ()=> {
+app.listen(8080, ()=> {
     console.log("Express app listening")
 })
