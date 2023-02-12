@@ -41,6 +41,6 @@ app.post('/api/uploadfile', upload.single('image'), (req, res)=> {
   });
 })
 
-app.listen(5000, ()=> {
+app.listen(8080, ()=> {
     console.log("Express app listening")
 })
