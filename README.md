@@ -34,8 +34,11 @@ NumPy is a Python library for scientific computing that provides support for lar
 - Making the data extraction API available.
 - Implementing a log-in system with authentication and databases.
 
+## Using Docker
+We have a branch called `jensen/docker-things` where we attempted to use dockers. Check it out if you're curious. The branch's READ.ME has instruction to run the application dockers (assuming you already have a Docker setup). 
+
 ## Credits
 - Haruki Koh ([GitHub](https://github.com/KohHaruki) | UniMelb student): Front-end implementation with React JS and TypeScript
 - Euan Lim ([GitHub](https://github.com/GrassyAirplane) | Monash U student): Back-end implementation with Express.js (server) and Python (scanner)
 - Zoe Tay ([GitHub](https://github.com/NiftyCoffee) | Monash U student): CSS styling and website design
-- Jensen Kau ([GitHub](https://github.com/JensenKau) | Monash U student): Debugging and technology research
+- Jensen Kau ([GitHub](https://github.com/JensenKau) | Monash U student): Debugging, technology research, and Docker
