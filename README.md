@@ -2,7 +2,7 @@
 ## Overview 
 This project, submitted by Team Cabbage for SummerHack2023 by CISSA, is a web application that simplifies the process of data collection for data scientists. The app extracts tabular data from PNG, JPG, or PDF files uploaded by the user and converts it into a downloadable CSV file. A majority of data scientists' time and effort is spent on collecting, cleaning, and preparing of data for analysis. Our project hopes to minimise such overhead.
 
-Access the video @ https://youtu.be/hb62_uenFzI
+**Access the video @** https://youtu.be/hb62_uenFzI
 
 ## Key Features
 - Extracts tabular data from multiple image files (PNG, JPG, PDF)
