@@ -1,5 +1,13 @@
-#download-button button{
-    margin: 0 20.7rem;
-    align-items: center;
+#download-button {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #FFF;
+    background-color: #8fb879;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0;
+    width: 100%;
 }
 
