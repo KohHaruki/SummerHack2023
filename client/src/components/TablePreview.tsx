@@ -1,5 +1,6 @@
 import { UniqueTabularData } from '../types/UniqueTabularData'
 import Table from './Table';
+import "./TablePreview.css"
 
 interface TablePreviewProps {
     downloadableData: UniqueTabularData[];
@@ -23,16 +24,16 @@ const TablePreview = (props: TablePreviewProps) => {
     }
 
     return (
-        <>
+        <div className='container'>
             {
                 props.downloadableData.map((tabularData: UniqueTabularData, index: number) => (
                     <div key={tabularData.uid}>
                         <Table key={tabularData.uid} title={"Table " + (index + 1)} tabulardata={tabularData.tabulardata}/>
-                        <button onClick={() => downloadCsv(tabularData.csv, index)}>Download</button>
+                        <button id="download-button" onClick={() => downloadCsv(tabularData.csv, index)}>Download</button>
                     </div>
                 ))
             }
-        </>
+        </div>
     )
 }
 
