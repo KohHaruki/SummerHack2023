@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/SummerHack2023',
+  base: "/SummerHack2023",
   plugins: [react()],
 })
