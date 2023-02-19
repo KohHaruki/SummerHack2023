@@ -15,7 +15,9 @@ const router = createBrowserRouter(
       <Route path='developer' element={<Developer />} />
       <Route path='login' element={<LogIn />} />
     </Route>
-  )
+  ), {
+    basename: "/SummerHack2023"
+  }
 )
 
 function App() {
